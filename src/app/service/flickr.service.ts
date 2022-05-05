@@ -2,20 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+import { FlickrPhoto } from '../model/flickr.model';
 
-export interface FlickrPhoto {
-  farm: string;
-  id: string;
-  secret: string;
-  server: string;
-  title: string;
-}
-
-export interface FlickrOutput {
-  photos: {
-    photo: FlickrPhoto[];
-  };
-}
 
 @Injectable({
   providedIn: 'root'
